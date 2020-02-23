@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="rootPane" prefHeight="575.0" prefWidth="870.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rent.system.RegisterLandLordController">
+   <children>
+      <Pane layoutX="177.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="575.0" prefWidth="693.0" style="-fx-background-color: #fff;">
+         <children>
+            <JFXTextField fx:id="firstName" layoutX="127.0" layoutY="144.0" prefHeight="27.0" prefWidth="167.0" promptText="First Name" unFocusColor="#0069c0">
+               <font>
+                  <Font name="Bodoni MT" size="13.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="lastName" layoutX="402.0" layoutY="145.0" prefHeight="25.0" prefWidth="167.0" promptText="Last Name" unFocusColor="#0069c0" />
+            <JFXTextField fx:id="email" layoutX="399.0" layoutY="274.0" prefHeight="27.0" prefWidth="167.0" promptText="Email" unFocusColor="#0069c0">
+               <font>
+                  <Font name="Bodoni MT" size="13.0" />
+               </font>
+            </JFXTextField>
+            <JFXRadioButton fx:id="male" layoutX="124.0" layoutY="216.0" text="Male">
+               <toggleGroup>
+                  <ToggleGroup fx:id="group" />
+               </toggleGroup></JFXRadioButton>
+            <JFXRadioButton fx:id="female" layoutX="399.0" layoutY="216.0" text="Female" toggleGroup="$group" />
+            <JFXTextField fx:id="telephone" layoutX="127.0" layoutY="342.0" prefHeight="27.0" prefWidth="167.0" promptText="Telephone" unFocusColor="#0069c0">
+               <font>
+                  <Font name="Bodoni MT" size="13.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="userrname" layoutX="127.0" layoutY="409.0" prefHeight="27.0" prefWidth="167.0" promptText="Username" unFocusColor="#0069c0">
+               <font>
+                  <Font name="Bodoni MT" size="13.0" />
+               </font>
+            </JFXTextField>
+            <JFXPasswordField fx:id="password" layoutX="399.0" layoutY="410.0" prefHeight="25.0" prefWidth="167.0" promptText="Password" unFocusColor="#0069c0" />
+            <Label layoutX="206.0" layoutY="56.0" text="Landlord Registartion" textFill="#0069c0">
+               <font>
+                  <Font name="Bell MT Bold" size="27.0" />
+               </font>
+            </Label>
+            <JFXPasswordField fx:id="confirmPassword" layoutX="127.0" layoutY="476.0" prefHeight="25.0" prefWidth="167.0" promptText="Confirm Password" unFocusColor="#0069c0" />
+            <JFXButton buttonType="RAISED" layoutX="414.0" layoutY="468.0" onAction="#registerLandlordBtn" prefHeight="42.0" prefWidth="143.0" style="-fx-background-color: #bbdefb; -fx-background-radius: 50px;" text="Register">
+               <font>
+                  <Font name="Bodoni MT Bold" size="13.0" />
+               </font>
+            </JFXButton>
+            <MaterialDesignIconView glyphName="CHECK" layoutX="514.0" layoutY="498.0" size="25" text="" />
+            <ImageView fitHeight="74.0" fitWidth="69.0" layoutX="120.0" layoutY="36.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../../images/house-logo-clipart-6.png" />
+               </image>
+            </ImageView>
+            <JFXTextField fx:id="landAccountNo" layoutX="402.0" layoutY="342.0" prefHeight="27.0" prefWidth="167.0" promptText="Account Number" unFocusColor="#0069c0">
+               <font>
+                  <Font name="Bodoni MT" size="13.0" />
+               </font>
+            </JFXTextField>
+            <JFXDatePicker fx:id="landlordDOB" layoutX="125.0" layoutY="275.0" promptText="D.O.B" />
+         </children>
+      </Pane>
+      <VBox prefHeight="575.0" prefWidth="176.0" style="-fx-background-color: #0069c0;">
+         <children>
+            <ImageView fx:id="landlordPhoto" fitHeight="150.0" fitWidth="192.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/login.png" />
+               </image>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </ImageView>
+            <JFXButton alignment="BASELINE_LEFT" buttonType="RAISED" graphicTextGap="10.0" onAction="#uploadLandlordPhoto" prefHeight="74.0" prefWidth="216.0" style="-fx-background-color: #0069c0;" text="Select Photo" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <graphic>
+                  <MaterialDesignIconView fill="#bbdefb" glyphName="IMAGE" size="25" />
+               </graphic>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+            </JFXButton>
+            <JFXButton alignment="BASELINE_LEFT" buttonType="RAISED" graphicTextGap="10.0" onAction="#loginButton" prefHeight="74.0" prefWidth="216.0" style="-fx-background-color: #0069c0;" text="Sgin In" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <graphic>
+                  <MaterialDesignIconView fill="#bbdefb" glyphName="ACCOUNT" size="25" />
+               </graphic>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+            </JFXButton>
+            <JFXButton alignment="BASELINE_LEFT" buttonType="RAISED" graphicTextGap="10.0" prefHeight="74.0" prefWidth="216.0" style="-fx-background-color: #0069c0;" text="Exit" textFill="WHITE">
+               <graphic>
+                  <MaterialDesignIconView fill="#bbdefb" glyphName="CLOSE" size="25" />
+               </graphic>
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+            </JFXButton>
+            <Label alignment="CENTER" contentDisplay="CENTER" text="The Landlord Association" textFill="WHITE">
+               <VBox.margin>
+                  <Insets left="20.0" top="100.0" />
+               </VBox.margin>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" text="of Mandeville" textFill="WHITE">
+               <padding>
+                  <Insets left="50.0" top="5.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Label>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

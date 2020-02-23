@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="575.0" prefWidth="870.0" style="-fx-background-color: #0069c0;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rent.system.LoginController">
+   <children>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="43.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true" />
+      <AnchorPane layoutX="423.0" layoutY="60.0" prefHeight="456.0" prefWidth="377.0" style="-fx-background-color: #fff;">
+         <children>
+            <JFXTextField fx:id="loginUsername" layoutX="79.0" layoutY="156.0" prefHeight="27.0" prefWidth="234.0" promptText="Username" unFocusColor="#90caf9">
+               <font>
+                  <Font name="Bodoni MT Bold Italic" size="13.0" />
+               </font>
+            </JFXTextField>
+            <JFXPasswordField fx:id="loginPassword" layoutX="79.0" layoutY="228.0" prefHeight="27.0" prefWidth="234.0" promptText="Password" unFocusColor="#90caf9">
+               <font>
+                  <Font name="Bodoni MT Bold Italic" size="13.0" />
+               </font>
+            </JFXPasswordField>
+            <JFXButton buttonType="RAISED" layoutX="112.0" layoutY="310.0" onAction="#signInButton" prefHeight="35.0" prefWidth="169.0" style="-fx-background-color: #bbdefb; -fx-background-radius: 50px;" text="Sign in" textAlignment="CENTER">
+               <font>
+                  <Font name="Bodoni MT Bold" size="19.0" />
+               </font>
+            </JFXButton>
+            <MaterialDesignIconView fill="#0069c0" glyphName="LOCK" layoutX="50.0" layoutY="251.0" size="25" />
+            <MaterialDesignIconView fill="#0069c0" glyphName="ACCOUNT" layoutX="50.0" layoutY="179.0" size="25" text="" />
+            <MaterialDesignIconView fill="#0069c0" glyphName="ACCOUNT_CIRCLE" layoutX="139.0" layoutY="117.0" size="100" />
+            <Label layoutX="88.0" layoutY="388.0" text="For Technical Support Call 1 888 - 429 - LAOM">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <Label layoutX="134.0" layoutY="414.0" text="Email: laom@gmail.com">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Label layoutX="29.0" layoutY="270.0" text="The Landlord Association" textFill="WHITE">
+         <font>
+            <Font name="Bell MT Bold" size="28.0" />
+         </font>
+      </Label>
+      <Label layoutX="98.0" layoutY="317.0" text="of Mandeville" textFill="WHITE">
+         <font>
+            <Font name="Bell MT Bold" size="28.0" />
+         </font>
+      </Label>
+      <Circle fill="WHITE" layoutX="193.0" layoutY="137.0" radius="109.0" stroke="WHITE" strokeType="INSIDE" />
+      <ImageView fitHeight="137.0" fitWidth="182.0" layoutX="98.0" layoutY="69.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../images/house-logo-clipart-6.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="102.0" layoutY="369.0" text="The path to your dream house" textFill="WHITE" />
+      <JFXButton buttonType="RAISED" layoutX="109.0" layoutY="460.0" onAction="#registerButton" prefHeight="39.0" prefWidth="147.0" style="-fx-background-color: #fff; -fx-background-radius: 50px;" text="Register Here" textAlignment="CENTER">
+         <font>
+            <Font name="Bodoni MT Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="141.0" layoutY="420.0" text="Need an account?" textFill="WHITE">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
